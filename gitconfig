@@ -1,0 +1,10 @@
+[user]
+	name = Christopher Heriot
+	email = cheriot@gmail.com
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[alias]
+  st = status
+  co = checkout
