@@ -1,0 +1,7 @@
+export EDITOR=vim
+
+if [ -f /etc/bash_completion.d/git ]; then
+  source /etc/bash_completion.d/git
+  GIT_PS1_SHOWDIRTYSTATE=true
+  PS1='\[\033[35m\u@\h:\033[36m\W\[\033[0m\033[33m$(__git_ps1 " (%s)")\033[0m\$ '
+fi
