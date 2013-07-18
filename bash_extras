@@ -5,3 +5,5 @@ if [ -f /etc/bash_completion.d/git ]; then
   GIT_PS1_SHOWDIRTYSTATE=true
   PS1='\[\e[1;30m\]\A \[\e[1;34m\]\u@\h:\w\[\e[0m\]\[\e[0;31m\]$(__git_ps1)\[\e[0m\]\$ '
 fi
+
+set -o vi
