@@ -87,31 +87,38 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias ll='ls -lh'
+alias la='ls -A'
+alias l='ls -CFh'
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-fi
 
-#export GAE_HOME=/opt/google_appengine/current
-#export PATH=$PATH:$GAE_HOME
-
-# http://www.doughellmann.com/docs/virtualenvwrapper/
-export WORKON_HOME=~/.virtualenv
-source /usr/local/bin/virtualenvwrapper.sh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
+# Git specific prompt and autocomplete.
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
-#export GIT_PS1_SHOWUPSTREAM="auto"
-source /etc/bash_completion.d/git
-#PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+export GIT_PS1_SHOWUPSTREAM="auto"
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+#if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#  . $(brew --prefix)/etc/bash_completion
+#fi
+if [ -f /etc/bash_completion.d/git ]; then
+  . /etc/bash_completion.d/git
+fi
+
+alias __git_ps1="git branch 2>/dev/null | grep '*' | sed 's/* \(.*\)/(\1)/'"
 PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+# Add npm's globally installed executables to PATH
+export PATH="/usr/local/share/npm/bin:$PATH"
+# Locals over globals (brew over osx)
+export PATH="/usr/local/bin:$PATH"
+# Rbenv
+eval "$(rbenv init -)"
+
+# The most important part
+export EDITOR=vim
+set -o vi

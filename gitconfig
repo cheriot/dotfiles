@@ -1,10 +1,13 @@
 [user]
-	name = Christopher Heriot
-	email = cheriot@gmail.com
+  name = Christopher Heriot
+  email = cheriot@gmail.com
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+  branch = auto
+  diff = auto
+  grep = auto
+  status = auto
 [alias]
   st = status
   co = checkout
+[core]
+  editor = vim

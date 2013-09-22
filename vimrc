@@ -34,9 +34,12 @@ filetype plugin indent on     " required!
 Bundle 'mileszs/ack.vim'
 Bundle 'Align'
 Bundle 'tpope/vim-fugitive'
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'kien/ctrlp.vim'
+Bundle 'torandu/vim-bufexplorer.git'
+"Bundle 'git://git.wincent.com/command-t.git'
 
 " Languages and libraries
+Bundle 'scrooloose/syntastic'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'tpope/vim-rails'
