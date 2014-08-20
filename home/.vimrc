@@ -4,49 +4,42 @@ set nocompatible               " be iMproved
 
 " ===== Vundle =====
 filetype off                   " required by vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/vundle'
 
-" My Bundles here:
-"
-" original repos on github
-"Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" vim-scripts repos
-" Bundle 'FuzzyFinder'
-" non github repos
-filetype plugin indent on     " required! 
-
+" My Plugins here:
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :PluginList          - list configured bundles
+" :PluginInstall(!)    - install(update) bundles
+" :PluginSearch(!) foo - search(or refresh cache first) for foo
+" :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" NOTE: comments after Plugin command are not allowed..
 
 " Utility
-Bundle 'mileszs/ack.vim'
-Bundle 'Align'
-Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
-Bundle 'torandu/vim-bufexplorer.git'
-"Bundle 'git://git.wincent.com/command-t.git'
+Plugin 'mileszs/ack.vim'
+Plugin 'Align'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'jlanzarotta/bufexplorer'
+"Plugin 'git://git.wincent.com/command-t.git'
 
 " Languages and libraries
-Bundle 'scrooloose/syntastic'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'itspriddle/vim-jquery'
-Bundle 'tpope/vim-rails'
-Bundle 'leshill/vim-json'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-haml'
-Bundle 'pangloss/vim-javascript'
+Plugin 'scrooloose/syntastic'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'itspriddle/vim-jquery'
+Plugin 'tpope/vim-rails'
+Plugin 'leshill/vim-json'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-haml'
+Plugin 'pangloss/vim-javascript'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
 " ===== end Vundle =====
 
 " The ubuntu command is ack-grep instead of ack
