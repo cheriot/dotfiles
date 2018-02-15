@@ -1,0 +1,2 @@
+# Give more memory to SBT to avoid running out when auto-rerunning specs.
+export SBT_OPTS="-Xmx3G -Xss1G"

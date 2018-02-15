@@ -1,0 +1,15 @@
+[core]
+	excludesfile = ~/.gitignore_global
+[user]
+	name = Chris Heriot
+	email = cheriot@gmail.com
+[color]
+	branch = auto
+	diff = auto
+	grep = auto
+	status = auto
+[alias]
+	st = status
+	co = checkout
+[credential]
+	helper = osxkeychain
