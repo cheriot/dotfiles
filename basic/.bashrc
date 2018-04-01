@@ -35,3 +35,4 @@ export PATH="~/bin:$PATH"
 
 [ -f ~/.bash_node ] && . ~/.bash_node
 [ -f ~/.bash_scala ] && . ~/.bash_scala
+[ -f ~/.bash_ocaml ] && . ~/.bash_ocaml

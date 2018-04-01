@@ -13,6 +13,7 @@ Plugin 'solarnz/thrift.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/syntastic'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'reasonml-editor/vim-reason-plus'
 
 call vundle#end()
 filetype plugin indent on    " required
@@ -63,3 +64,12 @@ set undodir=~/.vim/undo//
 " Change the color of the matching paren so it looks different than the
 " cursor.
 hi MatchParen cterm=bold ctermbg=none ctermfg=blue
+
+"during insert, kj escapes, `^ is so that the cursor doesn't move
+"inoremap kj <Esc>`^
+inoremap kj <Esc>
+"during insert, lkj escapes and saves
+"inoremap lkj <Esc>`^:w<CR>
+inoremap lkj <Esc>:w<CR>
+"during insert, lkj escapes and saves and QUITS
+inoremap ;lkj <Esc>:wq<CR>
