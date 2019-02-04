@@ -10,10 +10,13 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'vim-scripts/vim-auto-save'
 Plugin 'solarnz/thrift.vim'
+Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'reasonml-editor/vim-reason-plus'
+"Plugin 'reasonml-editor/vim-reason-plus'
+Plugin 'leafgarland/typescript-vim'
+"Plugin 'ianks/vim-tsx'
 
 call vundle#end()
 filetype plugin indent on    " required

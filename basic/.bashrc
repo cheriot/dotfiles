@@ -1,4 +1,4 @@
-export JAVA_HOME="$(/usr/libexec/java_home)"
+export JAVA_HOME="$(/usr/libexec/java_home -v "1.8")"
 export HOMEBREW_NO_ANALYTICS=1
 export EDITOR=vim
 set -o vi
@@ -33,6 +33,10 @@ export PROMPT_COMMAND='__git_ps1 "$LightGray$Blue$WorkingDir$LightGray" "$Prompt
 # My own scripts here
 export PATH="~/bin:$PATH"
 
-[ -f ~/.bash_node ] && . ~/.bash_node
+# Haskell ecosystem puts scripts here
+export PATH="~/.local/bin:$PATH"
+
+# [ -f ~/.bash_node ] && . ~/.bash_node
 [ -f ~/.bash_scala ] && . ~/.bash_scala
-[ -f ~/.bash_ocaml ] && . ~/.bash_ocaml
+# [ -f ~/.bash_ocaml ] && . ~/.bash_ocaml
+[ -f ~/.bash_google ] && . ~/.bash_google
