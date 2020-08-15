@@ -7,7 +7,4 @@ alias gg='git grep'
 alias gl='git log'
 alias gp='git push'
 
-alias s='sbt'
-alias st='sbt test'
-alias sit='sbt it:test'
-alias dsbt='SBT_OPTS="$SBT_OPTS  -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005" sbt'
+alias vim='nvim'

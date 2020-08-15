@@ -1,4 +1,3 @@
-## Dotfiles managed by GNU Stow
+## Mac customizations
 
-# mkdir ~/.vim/{backup,swap,undo}
-`stow --target ~ basic`
+`./sync.zsh`

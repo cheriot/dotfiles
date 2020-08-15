@@ -35,8 +35,13 @@ export PATH="~/bin:$PATH"
 
 # Haskell ecosystem puts scripts here
 export PATH="~/.local/bin:$PATH"
+# Python 3 from homebrew
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="$PATH:~/devspace/lib/flutter/bin"
 
 # [ -f ~/.bash_node ] && . ~/.bash_node
 [ -f ~/.bash_scala ] && . ~/.bash_scala
 # [ -f ~/.bash_ocaml ] && . ~/.bash_ocaml
 [ -f ~/.bash_google ] && . ~/.bash_google
+
+cd ~/devspace/newsy
