@@ -40,3 +40,13 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=blue
 map <C-n> :NERDTreeToggle<CR>
 " Exit when NERDTree is the last window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Function to source only if file exists {
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+" }
+
+call SourceIfExists("~/.vimrc-python")

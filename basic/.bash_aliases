@@ -8,3 +8,5 @@ alias gl='git log'
 alias gp='git push'
 
 alias vim='nvim'
+
+alias kc='kubectl'

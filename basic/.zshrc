@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/cheriot/.oh-my-zsh"
@@ -68,7 +68,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git helm sbt history-substring-search)
+plugins=(git helm sbt history-substring-search vi-mode)
+# Try https://github.com/jeffreytse/zsh-vi-mode if vi-mode is lacking
 
 source $ZSH/oh-my-zsh.sh
 
@@ -81,9 +82,10 @@ source $ZSH/oh-my-zsh.sh
 
 HISTSIZE=999999
 SAVEHIST=$HISTSIZE
-bindkey -v
-bindkey ‘^R’ history-incremental-search-backward
+bindkey -v # Vi mode
+
 export EDITOR=nvim
+export JAVA_HOME="$(/usr/libexec/java_home -v "11")"
 
 export HOMEBREW_NO_ANALYTICS=1
 
