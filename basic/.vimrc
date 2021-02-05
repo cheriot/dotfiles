@@ -68,11 +68,12 @@ set undodir=~/.vim/undo//
 " cursor.
 hi MatchParen cterm=bold ctermbg=none ctermfg=blue
 
-"during insert, kj escapes, `^ is so that the cursor doesn't move
-"inoremap kj <Esc>`^
-inoremap kj <Esc>
-"during insert, lkj escapes and saves
-"inoremap lkj <Esc>`^:w<CR>
-inoremap lkj <Esc>:w<CR>
-"during insert, lkj escapes and saves and QUITS
-inoremap ;lkj <Esc>:wq<CR>
+" Function to source only if file exists {
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+" }
+
+call SourceIfExists("~/.vimrc-python")
